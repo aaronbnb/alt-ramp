@@ -2,9 +2,10 @@
   "name": "alt-ramp",
   "version": "1.0.0",
   "description": "Generates alternative text for webpage images",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaronbnb/achlls_extension.git"
+    "url": "https://github.com/aaronbnb/alt-ramp.git"
   },
   "author": "Aaron Farber",
   "contributors": [
@@ -21,10 +22,7 @@
     "npm": "3.9.3"
   },
   "scripts": {
-    "build": "webpack -p",
-    "watch": "webpack --watch",
-    "test": "flow && jest",
-    "flow": "flow"
+    "start": "webpack --watch"
   },
   "dependencies": {
     "pretty-bytes": "^4.0.2",
