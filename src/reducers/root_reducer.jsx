@@ -1,6 +1,6 @@
 const initialState = 0;
 
-const RootReducer = (state = initialState, action) => {
+const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_COUNT':
       console.log("we in here");
@@ -10,4 +10,4 @@ const RootReducer = (state = initialState, action) => {
   }
 };
 
-export default RootReducer;
+export default rootReducer;

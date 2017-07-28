@@ -1,10 +1,13 @@
-import {createStore} from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import rootReducer from '../reducers/root_reducer';
 
-import {wrapStore} from 'react-chrome-redux';
+const configureStore = (preloadedState = {}) => (
+  createStore(
+    rootReducer,
+    preloadedState,
+    applyMiddleware(thunk)
+  )
+);
 
-const store = createStore(rootReducer, {});
-
-wrapStore(store, {
-  portName: 'example'
-});
+export default configureStore;
