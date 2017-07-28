@@ -5,20 +5,19 @@
   "author": "aaronbnb",
   "description": "This extension generates alt attributes for webpage images",
   "version": "1.0",
+
   "browser_action": {
     "default_icon": "icon.png",
     "default_title": "Alt Ramp",
     "default_popup": "popup.html"
   },
+
   "content_scripts": [{
    "css": ["styles.css"],
+   "js": ["background.bundle.js"],
    "matches": ["*://*/*"]
  }],
- "background": {
-   "scripts": [
-      "background.bundle.js"
-     ]
-   },
+ 
  "web_accessible_resources": [
     "icon.png"
   ],

@@ -28,6 +28,8 @@
     "pretty-bytes": "^4.0.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-chrome-redux": "0.0.7",
+    "redux": "^3.6.0",
     "semantic-ui-css": "^2.2.10",
     "semantic-ui-react": "^0.68.3"
   },
@@ -53,7 +55,6 @@
     "lodash": "^4.17.4",
     "react-redux": "^4.4.6",
     "react-router": "^2.4.1",
-    "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "superagent": "^3.5.2"
   }

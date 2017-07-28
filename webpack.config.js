@@ -10,19 +10,19 @@ module.exports = {
     // update: '.src/update.js'
   },
   output: {
-    path: path.resolve(__dirname),
-    filename: '[name].bundle.js'
+    filename: 'background.bundle.js'
   },
   module: {
    rules: [
-     {
-       test: /\.jsx?$/,
-       include: [
-         path.resolve(__dirname, './src'),
-         /pretty-bytes/ // <- ES6 module
-       ],
-       use: 'babel-loader'
-     },
+           {
+          test: /\.jsx?$/,         // Match both .js and .jsx files
+          exclude: /node_modules/,
+          loader: "babel-loader",
+          query:
+            {
+              presets:['react']
+            }
+      },
      {
        test: /\.css$/,
        loader: ExtractTextPlugin.extract({
