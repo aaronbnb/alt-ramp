@@ -6,6 +6,7 @@ import configureStore from './store/store';
 import App from './components/app';
 
 const proxyStore = configureStore();
+window.configureStore = configureStore;
 window.proxyStore = proxyStore;
 
 const anchor = document.createElement('div');
