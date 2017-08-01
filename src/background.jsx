@@ -3,19 +3,20 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {Store} from 'react-chrome-redux';
 import configureStore from './store/store';
-import App from './components/app';
+import Root from './components/root';
+import { receiveCount } from './actions/click_actions';
+
 
 const proxyStore = configureStore();
 window.configureStore = configureStore;
 window.proxyStore = proxyStore;
+window.receiveCount = receiveCount;
 
 const anchor = document.createElement('div');
 anchor.id = 'image-detector-header';
 
 document.body.insertBefore(anchor, document.body.childNodes[0]);
-const root = document.getElementById('image-detector-header');
+const header = document.getElementById('image-detector-header');
 
 ReactDOM.render(
-  <Provider store={proxyStore}>
-    <App document={root}/>
-  </Provider>, document.getElementById('image-detector-header'));
+  <Root store={proxyStore}/>, header);

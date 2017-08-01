@@ -1,16 +1,21 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-class App extends Component {
+class ImageDetector extends Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0, images: 0 };
+    this.state = { count: this.props.count,
+                  images: [] };
     this.boost = this.boost.bind(this);
   }
 
   componentDidMount() {
+    let pageImages = document.getElementsByTagName('img');
+    this.setState({images: pageImages.length});
     document.body.addEventListener('click', () => {
+      console.log("here");
       this.boost();
+      this.props.receiveCount();
     });
   }
 
@@ -19,20 +24,14 @@ class App extends Component {
   }
 
   render() {
-
+    console.log(this.props);
     return (
       <div>
         <p id='counter'>Count: {this.state.count}</p>
+        <p>Images: {this.state.images}</p>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    count: state.count,
-    images: state.images
-  };
-};
-
-export default connect(mapStateToProps)(App);
+export default ImageDetector;
