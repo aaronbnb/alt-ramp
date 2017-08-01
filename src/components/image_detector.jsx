@@ -4,8 +4,7 @@ import {connect} from 'react-redux';
 class ImageDetector extends Component {
   constructor(props) {
     super(props);
-    this.state = { count: this.props.count,
-                  images: [] };
+    this.state = this.props;
     this.boost = this.boost.bind(this);
   }
 

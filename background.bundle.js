@@ -11979,8 +11979,7 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 class ImageDetector extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   constructor(props) {
     super(props);
-    this.state = { count: this.props.count,
-      images: [] };
+    this.state = this.props;
     this.boost = this.boost.bind(this);
   }
 
@@ -12035,7 +12034,8 @@ class ImageDetector extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 
 const mapStateToProps = (state, ownProps) => ({
-  count: 0
+  count: 0,
+  images: []
 });
 
 const mapDispatchToProps = (dispatch, { location }) => ({

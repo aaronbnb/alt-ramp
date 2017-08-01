@@ -3,7 +3,8 @@ import ImageDetector from './image_detector';
 import { receiveCount }from '../actions/click_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  count: 0
+  count: 0,
+  images: []
 });
 
 const mapDispatchToProps = (dispatch, {location}) => ({
