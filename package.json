@@ -25,10 +25,13 @@
     "start": "webpack --watch"
   },
   "dependencies": {
+    "@google-cloud/vision": "^0.12.0",
+    "axios": "^0.16.2",
+    "jquery": "^3.2.1",
     "pretty-bytes": "^4.0.2",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
     "react-chrome-redux": "0.0.7",
+    "react-dom": "^15.5.4",
     "redux": "^3.6.0",
     "semantic-ui-css": "^2.2.10",
     "semantic-ui-react": "^0.68.3"

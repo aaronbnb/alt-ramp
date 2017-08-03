@@ -8,9 +8,14 @@ class ImageDetector extends Component {
     this.boost = this.boost.bind(this);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     let pageImages = document.getElementsByTagName('img');
     this.setState({images: pageImages.length});
+
+    [].slice.call(pageImages).forEach( image => {
+      this.props.createImage("image");
+    });
+
     document.body.addEventListener('click', () => {
       console.log("here");
       this.boost();
@@ -23,11 +28,9 @@ class ImageDetector extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
-        <p id='counter'>Count: {this.state.count}</p>
-        <p>Images: {this.state.images}</p>
+        {this.state.images}
       </div>
     );
   }

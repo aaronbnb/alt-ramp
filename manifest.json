@@ -14,7 +14,9 @@
     "default_title": "Alt Ramp",
     "default_popup": "popup.html"
   },
-
+  "background": [{
+    "scripts": "jquery.js"
+  }],
   "content_scripts": [{
    "css": ["styles.css"],
    "js": ["background.bundle.js"],
