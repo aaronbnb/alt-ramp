@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+
+  "name": "Alt Ramp",
+  "author": "aaronbnb",
+  "description": "This extension generates alt attributes for webpage images",
+  "version": "1.0",
+  "icons": {
+    "64": "assets/icon-128.png",
+    "128": "assets/icon-256.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/icon-256.png",
+    "default_title": "Alt Ramp",
+    "default_popup": "popup.html"
+  },
+  "background": [{
+    "scripts": "jquery.js"
+  }],
+  "content_scripts": [{
+   "css": ["styles.css"],
+   "js": ["background.bundle.js"],
+   "matches": ["*://*/*"]
+ }],
+
+ "web_accessible_resources": [
+    "icon.png"
+  ],
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "clipboardRead",
+    "pageCapture",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "<all_urls>"
+  ]
+}
