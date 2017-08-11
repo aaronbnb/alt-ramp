@@ -6,15 +6,17 @@
   "description": "This extension generates alt attributes for webpage images",
   "version": "1.0",
   "icons": {
-    "64": "assets/icon-128.png",
-    "128": "assets/icon-256.png"
+    "64": "app/assets/images/icon-128.png",
+    "128": "app/assets/images/icon-256.png"
   },
   "browser_action": {
-    "default_icon": "assets/icon-256.png",
+    "default_icon": "app/assets/images/icon-256.png",
     "default_title": "Alt Ramp",
     "default_popup": "popup.html"
   },
-
+  "background": [{
+    "scripts": "jquery.js"
+  }],
   "content_scripts": [{
    "css": ["styles.css"],
    "js": ["background.bundle.js"],
@@ -22,7 +24,7 @@
  }],
 
  "web_accessible_resources": [
-    "icon.png"
+    "app/assets/images/icon-256.png"
   ],
   "permissions": [
     "activeTab",

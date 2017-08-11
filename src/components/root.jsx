@@ -9,7 +9,7 @@ const Root = ({ store }) => {
 
   return (
     <Provider store={store}>
-      <ImageDetectorContainer document={document}/>
+      <ImageDetectorContainer document={document} images={document.getElementsByTagName('img')}/>
     </Provider>
   );
 };
