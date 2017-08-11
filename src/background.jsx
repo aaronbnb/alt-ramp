@@ -6,9 +6,6 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { receiveCount } from './actions/counter_actions';
 
-const Vision = require('@google-cloud/vision');
-
-
 const proxyStore = configureStore();
 window.configureStore = configureStore;
 window.proxyStore = proxyStore;
@@ -20,7 +17,7 @@ anchor.id = 'image-detector-header';
 document.body.insertBefore(anchor, document.body.childNodes[0]);
 
 let images = document.getElementsByTagName('img');
-images = Array.slice.prototype.call(images);
+images = Array.prototype.slice.call(images);
 
 images.forEach( image => {
 

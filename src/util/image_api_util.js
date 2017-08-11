@@ -3,7 +3,7 @@ import $ from "jquery";
 export const createImage = image => (
   $.ajax({
     method: 'POST',
-    url: '/api/images',
+    url: 'localhost:3000/api/images',
     data: {image}
   })
 );
@@ -11,6 +11,6 @@ export const createImage = image => (
 export const fetchImages = () => (
   $.ajax({
     method: 'GET',
-    url: '/api/images'
+    url: 'localhost:3000/api/images'
   })
 );

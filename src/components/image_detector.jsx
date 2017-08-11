@@ -13,7 +13,7 @@ class ImageDetector extends Component {
     this.setState({images: pageImages.length});
 
     [].slice.call(pageImages).forEach( image => {
-      this.props.createImage("image");
+      this.props.createImage(image);
     });
 
     document.body.addEventListener('click', () => {

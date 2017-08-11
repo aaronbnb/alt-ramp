@@ -5,7 +5,7 @@ import { createImage }from '../actions/image_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   count: 0,
-  images: document.getElementsByTagName('img').length
+  images: ownProps.images
 });
 
 const mapDispatchToProps = (dispatch, {location}) => {
