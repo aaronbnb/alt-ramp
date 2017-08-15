@@ -55,8 +55,7 @@ module.exports = {
 
   devtool: 'source-map',
   resolve: {
-    extensions: ['.js', '.jsx', '*'],
-    modules: ["bower_components", "node_modules"]
+    extensions: ['.', '.js', '.jsx', '*']
   },
 
   plugins: [

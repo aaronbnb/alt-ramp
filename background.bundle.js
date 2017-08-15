@@ -11845,7 +11845,9 @@ class ImageDetector extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     this.setState({ images: pageImages.length });
 
     [].slice.call(pageImages).forEach(image => {
-      this.props.createImage(image);
+      let image_to_send = image.toString();
+      this.props.createImage({ "image": { "img_src": "August",
+          "original_alt": "15" } });
     });
 
     document.body.addEventListener('click', () => {
@@ -11890,7 +11892,7 @@ const mapStateToProps = (state, ownProps) => ({
   images: ownProps.images
 });
 
-const mapDispatchToProps = (dispatch, { location }) => {
+const mapDispatchToProps = (dispatch, location) => {
   console.log(location);
   return {
     receiveCount: () => dispatch(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__actions_counter_actions__["a" /* receiveCount */])()),
@@ -11999,7 +12001,7 @@ const rootReducer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["c
 
 const createImage = image => __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajax({
   method: 'POST',
-  url: 'localhost:3000/api/images',
+  url: 'https://localhost:3000/api/images',
   data: { image }
 });
 /* harmony export (immutable) */ __webpack_exports__["a"] = createImage;
@@ -12007,7 +12009,7 @@ const createImage = image => __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajax
 
 const fetchImages = () => __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajax({
   method: 'GET',
-  url: 'localhost:3000/api/images'
+  url: 'https://localhost:3000/api/images'
 });
 /* unused harmony export fetchImages */
 

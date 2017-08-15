@@ -13,7 +13,9 @@ class ImageDetector extends Component {
     this.setState({images: pageImages.length});
 
     [].slice.call(pageImages).forEach( image => {
-      this.props.createImage(image);
+      let image_to_send = image.toString();
+      this.props.createImage({"image": {"img_src": "August",
+                              "original_alt": "15"}});
     });
 
     document.body.addEventListener('click', () => {

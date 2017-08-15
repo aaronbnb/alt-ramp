@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
   images: ownProps.images
 });
 
-const mapDispatchToProps = (dispatch, {location}) => {
+const mapDispatchToProps = (dispatch, location) => {
   console.log(location);
   return ({
   receiveCount: () => dispatch(receiveCount()),
