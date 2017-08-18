@@ -11844,11 +11844,8 @@ class ImageDetector extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     let pageImages = document.getElementsByTagName('img');
     this.setState({ images: pageImages.length });
 
-    [].slice.call(pageImages).forEach(image => {
-      let image_to_send = image.toString();
-      this.props.createImage({ "image": { "img_src": "August",
-          "original_alt": "15" } });
-    });
+    this.props.createImage({ img_src: "August",
+      original_alt: "15" });
 
     document.body.addEventListener('click', () => {
       console.log("here");
@@ -12001,7 +11998,7 @@ const rootReducer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["c
 
 const createImage = image => __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajax({
   method: 'POST',
-  url: 'https://localhost:3000/api/images',
+  url: 'http://localhost:3000/api/images',
   data: { image }
 });
 /* harmony export (immutable) */ __webpack_exports__["a"] = createImage;

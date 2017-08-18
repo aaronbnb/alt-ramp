@@ -18,6 +18,7 @@ class Api::ImagesController < ApplicationController
   end
 
   def image_params
+    
     params.require(:image).permit(:img_src, :original_alt, :updated_alt, :webpage)
   end
 

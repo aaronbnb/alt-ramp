@@ -3,7 +3,7 @@ import $ from "jquery";
 export const createImage = image => (
   $.ajax({
     method: 'POST',
-    url: 'https://localhost:3000/api/images',
+    url: 'http://localhost:3000/api/images',
     data: {image}
   })
 );
